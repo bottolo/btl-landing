@@ -24,18 +24,16 @@ const Page = () => {
 			{Array.from({ length: 300 }, (_, index) => {
 				const position = generateRandomPosition();
 				return (
-					<div
+					<pre
 						key={index}
-						className="absolute text-sm text-gray-700 whitespace-nowrap opacity-30"
+						className="absolute text-sm text-gray-700 whitespace-nowrap opacity-30 hover:opacity-100 transition-opacity duration-300"
 						style={{
 							top: position.top,
 							left: position.left,
 						}}
 					>
-						<FuzzyText fontSize={18} enableHover={true}>
-							{randomPhrases[Math.floor(Math.random() * randomPhrases.length)]}
-						</FuzzyText>
-					</div>
+						{randomPhrases[Math.floor(Math.random() * randomPhrases.length)]}
+					</pre>
 				);
 			})}
 		</div>
