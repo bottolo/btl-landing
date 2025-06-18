@@ -1,5 +1,12 @@
+"use client";
+
+import dynamic from "next/dynamic";
 import Link from "next/link";
-import PixelCard from "../../components/PixelCard/PixelCard";
+
+const DynamicComponentWithNoSSR = dynamic(
+	() => import("../../components/PixelCard/PixelCard"),
+	{ ssr: false },
+);
 
 const galleryElements = [
 	{ image: "", text: "cccd", link: "/web" },
@@ -12,11 +19,11 @@ const Page = () => {
 		<div className={"grid grid-cols-1 md:grid-cols-4 gap-4"}>
 			{galleryElements.map((element) => (
 				<Link href={element?.link} className={"cursor-pointer"}>
-					<PixelCard key={element?.text}>
+					<DynamicComponentWithNoSSR key={element?.text}>
 						<div className={"absolute"}>
 							<pre>{element?.text}</pre>
 						</div>
-					</PixelCard>
+					</DynamicComponentWithNoSSR>
 				</Link>
 			))}
 		</div>

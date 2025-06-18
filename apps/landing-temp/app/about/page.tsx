@@ -1,5 +1,3 @@
-import FuzzyText from "../../components/FuzzyText/FuzzyText";
-
 const Page = () => {
 	const randomPhrases = [
 		"nothing will be said as there is nothing to be said about me and",
