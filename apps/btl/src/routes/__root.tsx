@@ -1,6 +1,6 @@
 import { createRootRoute, Outlet } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
-import Dither from "landing-temp/components/Dither/Dither.tsx";
+import Dither from "../blocks/Backgrounds/Dither/Dither.tsx";
 
 export const Route = createRootRoute({
 	component: () => (
