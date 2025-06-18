@@ -1,29 +1,16 @@
 {
-  "name": "with-tailwind",
   "private": true,
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "check-types": "turbo run check-types",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "prettier": "^3.5.3",
-    "prettier-plugin-tailwindcss": "^0.6.12",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
     "turbo": "^2.5.4"
   },
-  "engines": {
-    "node": ">=18"
-  },
-  "packageManager": "bun@1.2.16",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
-  "trustedDependencies": [
-    "@parcel/watcher",
-    "@swc/core",
-    "@tailwindcss/oxide"
-  ]
+  "packageManager": "pnpm@8.15.6",
+  "name": "with-vite"
 }
